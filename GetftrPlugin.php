@@ -139,6 +139,8 @@ class GetftrPlugin extends GenericPlugin
             return Hook::CONTINUE;
         }
 
+        $integratorIdSafe = htmlspecialchars($integratorId);
+
         $dropinButtonCode = "
 (function (G, e, t, F, T, R) {
 G[t] = {};
@@ -149,7 +151,7 @@ s.src = 'http://dropin-button.getft.io/integrator/' + R;
 s.type = 'text/javascript';
 q = e.getElementsByTagName(F)[0];
 q.parentNode.insertBefore(s, q);
-})(window, document, 'getftr', 'script', 'integratorId', '{$integratorId}');
+})(window, document, 'getftr', 'script', 'integratorId', '{$integratorIdSafe}');
 ";
 
         $templateMgr = TemplateManager::getManager($request);
