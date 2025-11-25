@@ -147,7 +147,7 @@ G[t] = {};
 G[t][T] = R;
 s = e.createElement(F);
 s.async = 1;
-s.src = 'http://dropin-button.getft.io/integrator/' + R;
+s.src = 'https://dropin-button.getft.io/integrator/' + R;
 s.type = 'text/javascript';
 q = e.getElementsByTagName(F)[0];
 q.parentNode.insertBefore(s, q);
