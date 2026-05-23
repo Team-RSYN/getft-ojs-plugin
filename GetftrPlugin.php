@@ -53,7 +53,7 @@ class GetftrPlugin extends GenericPlugin
 
     public function getActions($request, $actionArgs): array
     {
-        $actions = parent::getActions($request, $verb);
+        $actions = parent::getActions($request, $actionArgs);
         if (!$this->getEnabled()) {
             return $actions;
         }
